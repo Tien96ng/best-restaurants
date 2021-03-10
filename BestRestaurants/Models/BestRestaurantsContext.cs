@@ -2,13 +2,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BestRestaurants.Models
 {
-  public class BestRestaurants : DbContext
+  public class BestRestaurantsContext : DbContext
   {
     public virtual DbSet<Cuisine> Cuisines { get; set; }
-    public virtual DbSet<Restaurant> Restaurants { get; set; }
-    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Restaurant> Restaurants { get; set; }
+    // public virtual DbSet<Restaurant> Restaurants { get; set; }
+    // public DbSet<Review> Reviews { get; set; }
 
-    public BestRestaurantsContext(DbContext options) : base(options) { }
+    public BestRestaurantsContext(DbContextOptions options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

@@ -6,7 +6,7 @@ namespace BestRestaurants.Models
   {
     public Cuisine()
     {
-      this.Restaurant = new List<Restaurant> ();
+      this.Restaurants = new List<Restaurant> ();
     }
 
     public int CuisineId { get; set; }
