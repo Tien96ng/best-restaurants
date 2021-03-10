@@ -1,4 +1,4 @@
-create table `best_restaurants`.`restaurants` (RestaurantId INT NOT NULL AUTO_INCREMENT,Name VARCHAR(50),Description VARCHAR(255),Address VARCHAR(255),CuisineId INT,PRIMARY KEY(RestaurantId));
+create table `restaurants` (RestaurantId INT NOT NULL AUTO_INCREMENT,Name VARCHAR(50),Description VARCHAR(255),Address VARCHAR(255),CuisineId INT,PRIMARY KEY(RestaurantId));
 
 insert into restaurants (RestaurantId, Name, Description, Address, CuisineId) values (1, 'Red Robins', 'American Burger estalishment', '1234 Main St', 5);
 insert into restaurants (RestaurantId, Name, Description, Address, CuisineId) values (2, 'Outback Steakhouse', 'American BBQ', '2323 E Blvd', 5);
