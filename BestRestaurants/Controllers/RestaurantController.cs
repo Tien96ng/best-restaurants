@@ -17,10 +17,18 @@ namespace BestRestaurants.Controllers
       _db = db;
     }
     
-    public ActionResult Index(int cuisineId)
+    public ActionResult Create()
     {
-      List<Restaurant> model = _db.Restaurants.Where(restaurant => restaurant.CuisineId == cuisineId).ToList();
-      return View(model);
+      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Restaurant restaurant)
+    {
+      _db.Restaurants.Add(restaurant);
+      _db.SaveChanges();
+      return RedirectToAction("Index", "Home");
     }
 
   }
